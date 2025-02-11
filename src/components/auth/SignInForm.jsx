@@ -1,7 +1,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-// Validation schema
 const signInSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email address")
@@ -20,7 +19,6 @@ export default function SignInForm({ title = "Sign In" }) {
     validationSchema: signInSchema,
     onSubmit: (values) => {
       console.log("Sign In Data:", values);
-      // Add your sign-in logic here (e.g., API call)
     },
   });
 
@@ -41,7 +39,7 @@ export default function SignInForm({ title = "Sign In" }) {
         </h1>
 
         <form onSubmit={formik.handleSubmit} className="space-y-6">
-          {/* Email Field */}
+          {}
           <div>
             <input
               type="email"
@@ -63,7 +61,7 @@ export default function SignInForm({ title = "Sign In" }) {
             )}
           </div>
 
-          {/* Password Field */}
+          {}
           <div>
             <input
               type="password"
@@ -85,7 +83,7 @@ export default function SignInForm({ title = "Sign In" }) {
             )}
           </div>
 
-          {/* Submit Button */}
+          {}
           <button
             type="submit"
             className="w-full bg-green-500 text-white py-3 px-4 rounded-md hover:bg-green-600 transition"
